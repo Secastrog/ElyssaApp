@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+html, body {
+	font-family: Abel, Arial, Verdana, sans-serif;
+}
+
+.finder {
+	top: 10px;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translate(-50%, 50%);
+	transform: translate(-50%, 50%);
+}
+
+.finder h1 {
+	font-size: 3em;
+}
+
+.pseudo-search {
+	display: inline;
+	border: 2px solid #ccc;
+	border-radius: 100px;
+	padding: 10px 15px;
+	transition: background-color 0.5 ease-in-out;
+}
+
+.pseudo-search input {
+	border: 0;
+	background-color: transparent;
+	width: 200px;
+}
+
+.pseudo-search input:focus {
+	outline: none;
+}
+
+.finder input:focus {
+	outline: none;
+}
+
+button, i {
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.card {
+	width: 450px;
+	height: 250px;
+	background-color: #fff;
+	background: linear-gradient(#f8f8f8, #fff);
+	box-shadow: 0 8px 16px -15px rgba(0, 0, 0, 0.4);
+	border-radius: 6px;
+	overflow: hidden;
+	position: relative;
+	margin: 1.5rem;
+}
+
+.card h1 {
+	text-align: center;
+}
+.card h3 {
+	text-align: center;
+}
+
+.card .additional {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #6aa4ca;
+	background: linear-gradient(#566b92, #6aa4ca);
+	transition: width 0.4s;
+	overflow: hidden;
+	z-index: 2;
+}
+.card .additional .user-card {
+	width: 150px;
+	height: 100%;
+	position: relative;
+	float: left;
+	background-color: #648373ab;
+}
+
+.card .additional .user-card::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 10%;
+	right: -2px;
+	height: 80%;
+	border-left: 2px solid rgba(0, 0, 0, 0.025);
+}
+
+.card .additional .user-card .round img{
+	padding: 10% 15%;
+	border-radius: 50%;
+	width: 150px;
+}
+
+.card .additional .user-card .level,
+.card .additional .user-card .points {
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 0.75em;
+	font-weight: bold;
+	background: rgba(0, 0, 0, 0.15);
+	padding: 0.125rem 0.75rem;
+	border-radius: 100px;
+	white-space: nowrap;
+	text-align: center;
+	width: auto;
+}
+
+.card .additional .user-card .points {
+	top: 85%;
+}
+
+.card .additional .more-info {
+	width: 400px;
+	float: left;
+	position: absolute;
+	left: 100px;
+	height: 100%;
+	top: 0px;
+	text-align:  center;
+}
+.card .additional .more-info .inter{
+	color: #fff;
+	margin-bottom: 0;
+}
+.card .additional .more-info .inter .ubication{
+	margin-left: 80px;
+	float: left;
+	color: #fff;
+	margin-bottom: 0;
+}
+
+.card .additional .more-info h3 {
+	color: #fff;
+	margin-bottom: 0;
+	}
+
+.card.green .additional .more-info h1 {
+	color: #224C36;
+}
+
+.card .additional .coords {
+	margin: 0 1rem;
+	color: #fff;
+	font-size: 1rem;
+}
+
+.card .additional .coords.center{
+	margin-left: 20px;
+	text-align: center;
+	width: 100%;
+	margin: 0;
+	width: auto;
+}
+
+.card .additional .coords.center a{
+	color: rgb(209, 193, 193);
+}
+
+.card.green .additional .coords {
+	color: #325C46;
+}
+
+.card .additional .coords span+span {
+	float: right;
+}
+
+.card .additional .stats {
+	font-size: 2rem;
+	display: flex;
+	position: absolute;
+	bottom: 1rem;
+	left: 1rem;
+	right: 1rem;
+	top: auto;
+	color: #fff;
+}
+
+.card.green .additional .stats {
+	color: #325C46;
+}
+
+.card .additional .stats>div {
+	flex: 1;
+	text-align: center;
+}
+
+.card .additional .stats i {
+	display: inline;
+}
+
+.card .additional .stats div.title {
+	font-size: 0.75rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.card .additional .stats div.value {
+	font-size: 1rem;
+	font-weight: bold;
+	line-height: 1rem;
+}
+
+.card .additional .stats div.value.infinity {
+	font-size: 2.5rem;
+}
+
+.card .general {
+	color: #fff;
+	margin-left: 140px;
+	top: -0px;
+	width: 300px;
+	height: 100%;
+	position: absolute;
+	left: -10;
+	z-index: 1;
+	box-sizing: border-box;
+	padding: 1rem;
+	padding-top: 0;
+}
+.card .general .more {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	font-size: 0.9em;
+}
+

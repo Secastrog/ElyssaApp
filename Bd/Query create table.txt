@@ -1,0 +1,19 @@
+
+use [ElyssaAppBD]
+go
+create table ElyssaAccount (
+IdAcElyssa int primary key identity,
+Name varchar (MAX),
+SurName varchar (MAX),
+Password varchar (MAX),
+Email varchar (MAX)
+);
+
+create table HistoryClimate(
+IdClimate int primary key identity,
+City varchar (MAX),
+Lat varchar (MAX),
+Long varchar (MAX),
+Temperature varchar (MAX),
+IdAcElyssa int foreign key references ElyssaAccount)
+;

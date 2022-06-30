@@ -1,0 +1,159 @@
+@import "../../../../src/assets/styles/variables";
+
+.carta-general {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #8132a7;
+    border-radius: 14px;
+    @media (max-width: $mobile-width) {
+        //height: 100vh;;
+    }
+    @media (min-width: $mobile-width) {
+        width: 469px;
+        height: 600px;
+    }
+
+    margin: 10px;
+    .card-body {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        .validation-errors {
+            padding: 10px;
+            .error-message {
+                color: #e0161b;
+                font-size: smaller;
+                font-family: Gotham Pro;
+            }
+        }
+        .flex-logo {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            @media (max-width: $iphone5-width) {
+                margin: 5px;
+            }
+            @media (min-width: $mobile-width) {
+                margin: 15px;
+            }
+
+            .btn-login {
+                width: 138px;
+                background-color: $colorprimario;
+                border-radius: 13px;
+                opacity: 1;
+                font: normal normal bold 19px/22px Gotham Pro;
+                letter-spacing: 0px;
+                color: #ffffff;
+                opacity: 1;
+            }
+            .btn-login:active {
+                width: 138px;
+                background-color: white;
+                border-radius: 13px;
+                opacity: 1;
+                font: normal normal bold 19px/22px Gotham Pro;
+                letter-spacing: 0px;
+                color: black;
+                opacity: 1;
+            }
+            .logo-pagos {
+                //  background-image: url('../../../../assets/imgs/logo_pagos.png');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 202px;
+                height: 51px;
+            }
+            .card-title {
+                font: normal normal normal 18px/21px Gotham Pro;
+                letter-spacing: 0px;
+                color: $colorsecundario;
+                opacity: 1;
+            }
+            .olvidar {
+                text-decoration: underline;
+                font: normal normal normal 18px/21px Gotham Pro;
+                letter-spacing: 0px;
+                color: $colorsecundario;
+                opacity: 1;
+            }
+        }
+    }
+}
+.inputs {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    label {
+        font: normal normal normal 18px/21px Gotham Pro;
+        letter-spacing: 0px;
+        color: $colorsecundario;
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    border-bottom: 0px solid #dee2e6;
+    justify-content: center;
+    text-align: center;
+    .modal-title {
+        font: normal normal bold 26px/30px Gotham Pro;
+        letter-spacing: 0px;
+        color: $colorsecundario;
+        opacity: 1;
+    }
+}
+
+
+.modal-body {
+    border-bottom: 0px solid #dee2e6;
+    text-align: center;
+    font: normal normal normal 20px/23px Gotham Pro;
+    letter-spacing: 0px;
+    color: $colorsecundario;
+    opacity: 1;
+}
+
+.modal-footer {
+    justify-content: center;
+    border-top: 0px solid #dee2e6;
+    .btn-modal {
+        color: white;
+        width: 150px;
+        background-color: $colorprimario;
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 30px;
+        opacity: 1;
+    }
+    .btn-modal:active {
+        color: white;
+        background-color: $colorprimariooscuro;
+    }
+}
+
+.flex-logo2 {
+    display: flex;
+    justify-content: center;
+    @media (max-width: $iphone5-width) {
+        margin: 6px;
+    }
+    @media (min-width: $mobile-width) {
+        margin: 3px;
+    }
+    .olvidar {
+        text-decoration: underline;
+        font: normal normal normal 18px/21px Gotham Pro;
+        letter-spacing: 0px;
+        color: $colorsecundario;
+        opacity: 1;
+    }
+}
+.inp{
+    text-align: center;
+    box-shadow: 0px 3px 6px #8132a7;
+    border-radius: 14px;
+    height: 30px;
+    font-size: 16
+    px;
+}

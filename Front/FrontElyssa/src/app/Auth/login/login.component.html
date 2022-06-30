@@ -1,0 +1,60 @@
+<body style="height: 100vh;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+width: 100%;
+text-align: center;">
+<p-toast position="top-center"></p-toast>
+  <div class="card carta-general">
+    <form [formGroup]="myform">
+      <p-toast position="top-center"></p-toast>
+      <div class="card-body">
+        <div class="flex-logo">
+          <div class="logo-pagos animate__animated animate__bounce">
+          </div>
+        </div>
+        <div class="flex-logo">
+          <h5 class="card-title">Iniciar sesion</h5>
+        </div>
+        <div class="inputs">
+          <label for="usuario">Usuario</label> <br>         
+          <input id="usuario" placeholder="Correo electrónico ó usuario" type="text" 
+            formControlName="usuario" class="inp"/>
+        </div>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.usuario">
+            <div class="error-message"
+              *ngIf="myform.get('usuario')?.hasError(validation.type) && (myform.get('usuario')?.dirty || myform.get('usuario')?.touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+        <div class="inputs">
+          <label for="password">Contraseña</label><br>
+          <div class="p-inputgroup mt-2">
+            <input id="password" placeholder="Contraseña" [type]="tipo_input" class="inp"
+              formControlName="password">
+            <span (click)="Visualizar_password()" class="p-inputgroup-addon"><i
+                [class]="vizualizar_password"></i></span>
+          </div>
+        </div>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.password">
+            <div class="error-message"
+              *ngIf="myform.get('password')?.hasError(validation.type) && (myform.get('password')?.dirty || myform.get('password')?.touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+        <div class="flex-logo">
+          <button type="button" class="btn btn-login" (click)="login_in()">Ingresar</button>          
+        </div>
+      </div>
+    </form>
+    <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+      <p style="font-size: 20px; color: white">Cargando...</p>
+    </ngx-spinner>
+    
+  </div>
+</body>

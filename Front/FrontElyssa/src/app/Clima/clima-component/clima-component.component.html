@@ -1,0 +1,40 @@
+<form [formGroup]="myform">
+    <p-toast position="top-center"></p-toast>
+    <div class="finder">
+        <div class="busqueda" style="text-align: center;">
+            <h2>Busqueda de temperatura por ciudad</h2><br>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Ingrese la ciudad"
+                    aria-label="Recipient's username" formControlName="city" aria-describedby="button-addon2">                    
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                            class="fa fa-magnifying-glass" (click)="tomartemperatura()"></i></button>
+                </div>  
+            </div>
+            <div>
+              <div class="validation-errors">
+                <ng-container *ngFor="let validation of validation_messages.city">
+                  <div class="error-message"
+                    *ngIf="myform.get('city')?.hasError(validation.type) && (myform.get('city')?.dirty || myform.get('city')?.touched)">
+                    {{ validation.message }}
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+        </div>
+        <div class="card text-center">
+            <div class="card-header">
+              Ciudad seleccionada: {{ciudad}}
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Temperatura de {{ciudad}}</h5>
+              <h1>{{tecmperatura.toFixed(2)}}° </h1>
+            </div>
+            <div class="card-footer text-muted">
+            </div>
+          </div>
+    </div>
+</form>
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+    <p style="font-size: 20px; color: white">Cargando...</p>
+  </ngx-spinner>
